@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button
 } from "react-native";
 import {
   CopilotProvider,
@@ -35,6 +36,11 @@ function App() {
       setLastEvent(`stop`);
     });
   }, [copilotEvents]);
+
+  const onPressUnregisterStep = () => {
+    const allSteps = ['openApp','secondText','thirdText']
+    allSteps.map((item)=>unregisterStep(item))
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -115,6 +121,7 @@ function App() {
           color="#888"
         />
       </View>
+      <Button title={'Unregister Steps'} onPress={onPressUnregisterStep}/>
     </SafeAreaView>
   );
 }

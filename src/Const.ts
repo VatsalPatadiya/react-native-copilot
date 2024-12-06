@@ -1,5 +1,5 @@
 const Const = {
   radiusBorder: {},
-  activeCoPilotStep: 0,
-};
-export default Const;
+  activeCoPilotStep: 0
+}
+export default Const
